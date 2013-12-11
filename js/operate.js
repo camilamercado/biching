@@ -200,6 +200,12 @@ function cover() {
 		document.querySelector('#cover').style.display="block";
 		document.querySelector('#timeline').style.display="none";
 		document.querySelector('#hexagram').style.display="none";
+
+		document.querySelector('.zero').style.color="deepskyblue";
+		document.querySelector('.one').style.color="orchid";
+		document.querySelector('.two').style.color="orchid";
+
+
 }
 
 function timeline() {
@@ -207,6 +213,10 @@ function timeline() {
 		document.querySelector('#timeline').style.display="block";
 		document.querySelector('#cover').style.display="none";
 		document.querySelector('#hexagram').style.display="none";
+
+		document.querySelector('.one').style.color="deepskyblue";
+		document.querySelector('.zero').style.color="orchid";
+		document.querySelector('.two').style.color="orchid";
 
 }
 
@@ -225,6 +235,10 @@ function hexagram() {
 		document.querySelector('.myiframe').style.display="block";
 		document.querySelector('.record').style.display="none";
 		document.querySelector('.entered').style.display="none";
+
+		document.querySelector('.two').style.color="deepskyblue";
+		document.querySelector('.one').style.color="orchid";
+		document.querySelector('.zero').style.color="orchid";
 }
 
 function narrative() {
@@ -235,6 +249,8 @@ function narrative() {
 
 }
 
-
+function hopper() {
+		document.querySelector('.grassHopper' ).style.display="block";
+}
 	
 
