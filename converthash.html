@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+		<style type="text/css">		 
+
+			#container {
+				margin-top: 10%!important;
+				margin: auto;
+				width: 800px;
+				height: 800px;
+				font-family: "Lucida Console" !important;
+			}
+
+			input {
+			  text-align: center;
+			  width: 100%;
+			  height: 60px;
+			}
+
+			#decimal {
+				margin: 20px;
+				width: 45%;
+				height: auto;
+				float: left;
+			}
+
+			#decimal input {
+			    text-align: center;
+			    width: 100%;
+			    height: 230px;
+			    margin-top: 10px;
+			}
+
+			#I1 {
+				font-size: 40px;
+			}
+			
+			#I2 {
+				font-size: 10px!important;
+				background: black;
+				color: #d7f7d5;
+			}
+
+			#hexagram {
+				margin: 20px;
+				width: 45%;
+				height: auto;
+				float: left;
+			}
+
+			#hexagram input {
+				font-size: 50px;
+			    text-align: center;
+			    width: 100%;
+			    height: 66px;
+			    margin-top: 10px;
+			}
+
+			#judgment {
+				margin: 20px;
+				width: 95%;
+				float: left;
+			}
+
+			#judgment input {
+				font-size: 20px;
+				height: 66px;
+			}
+			
+
+		</style>
+
+    </head>
+
+		<body>	
+			
+			<div id="container">
+				
+				<div id="decimal">
+					<input id="I1" value=""/>
+					<input id="I2" value=""/>
+				</div>
+
+				<div id="hexagram">
+					<input id="L5" value=""/>
+					<input id="L4" value=""/>
+					<input id="L3" value=""/>
+					
+					<input id="L2" value=""/>
+					<input id="L1" value=""/>
+					<input id="L0" value=""/>
+				</div>	
+
+				<button onclick="convert();">Convert!</button>
+
+			</div>	
+
+				
+				<script>
+
+					var today = new Date();
+					var dd = today.getDate();
+					var mm = today.getMonth()+1; //January is 0!
+
+					var yyyy = today.getFullYear();
+					if(dd<10){dd='0'+dd} 
+					if(mm<10){mm='0'+mm} 
+					today = mm+'/'+dd+'/'+yyyy;
+
+					document.getElementById("I1").value=today;
+					console.log(today);
+					
+					var timer=setInterval(function(){convert()},1000);
+
+					//establish date and feed to input / set up timer interval
+
+						
+						function convert() {
+
+
+							var  input= document.getElementById("I1").value;
+						    var  output= document.getElementById("I2");  
+						    var  binary= output.value
+
+						    //asign text input and binary output via html
+						    var hash = 0, i, char;
+								
+						    	String.prototype.hashCode = function(){
+								    
+								    if (input.length == 0) return hash;
+								    for (i = 0, l = input.length; i < l; i++) {
+								        char  = input.charCodeAt(i);
+								        hash  = ((hash<<5)-hash)+char;
+								        hash |= 0; // Convert to 32bit integer
+								    }
+								    return hash;
+								};
+
+
+								output.value = "";
+								for (i=0; i < hash.length; i++) {
+								        
+								    output.value +=hash[i].charCodeAt(0).toString(2);
+								
+								}
+    
+								//for loop converts characters to unicode, then base 2 (binary)
+								    
+								    
+								    
+								    console.log(binary.length);
+								    var divide= binary.length /6;
+								    console.log(divide);
+	  
+										var lines= binary.match( new RegExp('.{1,' + Math.ceil(divide) + '}', 'g'));
+										console.log(lines);
+
+										//console logs binary sections in equal groups of 6 via . match / regular expression
+
+										    
+										    
+										    var coin= lines.reverse().map(Number);
+										    console.log(coin);
+		
+											//convert string to numeric value 
+											
+												
+												
+												for (var i = 0; i < coin.length; i++) {
+
+													if (coin[i] % 2 === 0) {
+												        
+												        console.log("- - yin");
+												        coin[i] = coin[i].toString().replace(/(.*)/, " - -  ");  
+												        
+												    } else {
+												        
+												        console.log("--- yang");
+														coin[i] = coin[i].toString().replace(/(.*)/, " ---  ");
+												        
+												    }
+
+												}
+
+												// for each array substring find out if numerical value is evenly devisable by 2. 
+												// If so, replace string using regex from binary to a yin, broken line
+												// If not, replace string using regex from binary to a yang, solid line
+
+												
+
+												document.getElementById("L5").value=coin[5];
+												document.getElementById("L4").value=coin[4];
+												document.getElementById("L3").value=coin[3];
+
+												document.getElementById("L2").value=coin[2];
+												document.getElementById("L1").value=coin[1];
+												document.getElementById("L0").value=coin[0];
+												
+
+												// pass coin array values to the HTML and build hexagram
+							}				
+									
+						
+
+
+				</script>
+		</body>
+</html>
+
+
+
