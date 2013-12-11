@@ -1,0 +1,148 @@
+
+
+histories.on('child_added', function(hist){
+
+console.log('workin girl')
+
+			console.log(hist.val())
+			console.log(hist.val().base)
+
+
+			var tmpl = '<div class="timeline0" onmouseover="show();">\
+                            
+                            <div class="timeImg3">\
+                                <div class="tl_upper3"></div>\
+                                <div class="tl_base3"></div>\
+                            </div>\
+                           
+                            <div class="stamp3">\
+                                <div class="date3"></div>\
+                                <div class="hour3"></div>\
+                                <div class="name3"></div>\
+                            </div>\
+                           
+                            <div class="story3"></div>\
+                      
+                        </div>'
+
+            tmpl = $(tmpl);
+            
+            tmpl.find('.tl_upper3').style.backgroundImage(hist.val().upper)
+            tmpl.find('.tl_base3').style.backgroundImage(hist.val().base)
+
+            tmpl.find('.date3').text(hist.val().date)
+            tmpl.find('.hour3').text(hist.val().hour)
+            tmpl.find('.name3').text(hist.val().name)
+
+            tmpl.find('.story3').text(hist.val().narrate)
+            
+
+            $('#left3').append(
+            	tmpl
+            );
+		
+});
+
+
+    // $("#timeline0").clone(true).removeAttr("id").attr("id", "timeline0" + i).appendTo("#left3")
+            // console.log('a')
+      //    document.querySelector('#tl_base3').style.backgroundImage=hist.val().base;
+            // document.querySelector('#tl_upper3').style.backgroundImage=hist.val().upper;
+
+            // document.getElementById("date3").innerHTML=hist.val().date;
+            // document.getElementById("hour3").innerHTML=hist.val().hour;
+            // document.getElementById("name3").innerHTML=hist.val().name;
+
+            // document.getElementById("story3").innerHTML=hist.val().narrate;
+
+
+    
+       <!--     <svg id="firm" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="100%" height="100%" viewBox="0 0 612 961.062" style="enable-background:new 0 0 612 961.062;" xml:space="preserve" >
+                
+                <polygon style="fill:#FDFDFE;stroke:#9FD39F;stroke-width:3;stroke-miterlimit:10;" points="386.297,24.868 477.217,118.096 477.217,249.924 386.297,343.156 257.729,343.156 166.83,249.924 166.83,118.096 257.729,24.868 " max-width"290px" max-height"296px"/>
+
+               
+           
+            </svg>
+
+            <svg id="yeilding" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 612 961.062" style="enable-background:new 0 0 612 961.062;" xml:space="preserve" >
+             
+    
+                <polygon style="fill:#00000;stroke:#9FD39F;stroke-width:3;stroke-miterlimit:10;" points="386.297,24.868 477.217,118.096 477.217,249.924 386.297,343.156 257.729,343.156 166.83,249.924 166.83,118.096 257.729,24.868 " max-width"290px" max-height"296px"/>
+
+                
+           
+            </svg>
+
+            <svg id="bridge" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 612 961.062" style="enable-background:new 0 0 612 961.062;" xml:space="preserve" >
+                
+                <g>
+    
+                    <line style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" x1="359.628" y1="138.714" x2="385.529" y2="164.612"/>
+        
+                    <polyline style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" points="442.8,217.764 477.528,184.421 477.528,164.617 466.637,164.617     "/>
+       
+                    <polyline style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" points="385.355,164.603 433.258,164.603 464.553,164.603 466.749,164.603     "/>
+        
+                    <line style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" x1="284.416" y1="138.718" x2="258.518" y2="164.617"/>
+        
+                    <polyline style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" points="201.247,217.768 166.519,184.425 166.519,164.621 177.409,164.621     "/>
+        
+                    <polyline style="fill:none;stroke:#B8B8B8;stroke-width:2;stroke-miterlimit:10;" points="258.692,164.606 210.788,164.606 179.493,164.606 177.296,164.606     "/>
+                
+                </g>
+       
+            </svg>
+ -->
+
+
+ #firm {
+    margin: auto;
+    left: 20px;
+    margin-top: 100px;
+    max-width: 530px;
+    max-height: 900px;
+    position: relative;
+    display: none;
+}
+
+.Ftext {
+    width: 100%;
+    text-align: center;
+    color: #9FD29E;
+    z-index: 1;
+    margin-top: -650px;
+    left: -10px;
+    position: relative;
+}
+
+#yeilding {
+    margin: auto;
+    left: 0px;
+    margin-top: 100px;
+    max-width: 530px;
+    max-height: 900px;
+    position: relative;
+    display: none;
+}
+
+.Ytext {
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    top: -350px;
+    position: relative;
+}
+
+#bridge {
+
+    margin: auto;
+    left: 0px;
+    margin-top: -50%;
+    position: relative;
+}
+
+#flux {
+    margin-left: 200px;
+}
