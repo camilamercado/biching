@@ -1,0 +1,542 @@
+/*#cover #sideNav {
+	z-index: 5;
+	position: absolute;
+	left: 49.5%;
+	height: 98%;
+	border-left: 1px double tomato;
+ 	border-top: 1px double cyan;
+}*/
+
+
+
+
+.leftTable {
+	width:48%;
+	/*min-height: 1300px;*/
+ 	height: 98%;
+ 	/*border: 1px solid tan;*/
+ 	float: left;
+ 	position: absolute;
+ 	z-index: 0;
+ 	background: black;
+    border-left: 1px double cyan;
+    border-bottom: 1px double greenyellow;
+    border-top: 1px double magenta;
+}
+
+.rightBook {
+	left: 48.55%;
+	width: 49.9%;
+	height: 98%;
+ 	background: white;
+ 	float: left;
+ 	position: absolute;
+ 	z-index: 0;
+ 	border-top: 1px double magenta;
+ 	border-bottom: 1px double greenyellow;
+ 	border-right: 1px double tomato;
+}
+
+.vase {
+    top: 120px;
+    margin-left: 50%;
+    left: -200px;
+    width: 65%;
+    min-width: 407px;
+    min-height: 441px;
+    max-width: 430px;
+    max-height: 500px;
+    height: 73%;
+    background: none;
+    float: left;
+    position: absolute;
+    z-index: 1;
+    /*border-bottom: 1px double magenta;
+    border-top: 1px double greenyellow;
+    border-left: 1px double tomato;
+    border-right: 1px double cyan;*/
+    border: 1px solid tomato;
+}
+
+
+.coin {
+	position: absolute;
+    width: 5.5em; height: 5.5em; 
+    -webkit-border-radius: 5em; -moz-border-radius: 5em;
+    background: powderblue;
+  }
+
+
+  .hole {
+  	width: 20px;
+  	height: 20px;
+  	margin-top: 50%;
+	margin-left: 50%;
+	top: -9px;
+	left: -9px;
+	position: relative;
+    background: black;
+  }
+
+
+
+  #c1 {
+  	position: absolute;
+  	top: 131px;
+	margin-left: 50%;
+    left: -44px;
+	/*border: 1px solid silver; */
+  }
+
+  #h1 {
+     /* border: 1px double silver; */
+ }
+
+
+
+ #c2 {
+  	position: absolute;
+  	top: 220px;
+	left: 43%;
+	border: 1px solid silver; 
+  }
+
+  #h2 {
+      border: 1px double silver; 
+ }
+
+
+  #c3 {
+  	position: absolute;
+  	top: 340px;
+	left: 43%;
+	border: 1px solid silver; 
+  }
+
+  #h3 {
+      border: 1px double silver; 
+ }
+
+ .title {
+    position: absolute;
+    top: 15px;
+    font-family: "andale mono";
+    color: tomato;
+    font-size: 17px;
+    width: 100px;
+    right: 40px;
+    margin: 6px;
+    text-align: right;
+}
+
+ .entries {
+    position: absolute;
+    float: left;
+    top: 50%;
+    font-family: "andale mono";
+    color: tomato;
+    font-size: 17px;
+    width: 100%;
+    border-bottom: 1px solid tomato;
+    padding-left: 15%;
+}
+
+.entryCount {
+    top: 0px;
+    position: absolute;
+    height: 10px;
+    font-family: "andale mono";
+    color: thistle;
+    font-size: 17px;
+    width: 200px;
+    margin-left: 100px;
+}
+
+ .timeStamp1 {
+    margin-top: 20px;
+    margin-left: 40px;
+ }
+
+
+.timeStamp1 input {
+    font-family: "andale mono";
+    color: #9FD29E;
+    font-size: 18px;
+    width: 90%;
+}
+
+.stamp {
+    width:120px;
+    height: 120px;
+    border: 1px double cyan;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+
+}
+
+.stamp img {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    margin-left:50%;
+    left: -42px;
+    margin-top:50%;
+    top: -45px;
+}
+
+ .subT {
+    position: absolute;
+    top: 650px;
+    font-family: "andale mono";
+    color: black;
+    font-size: 14px;
+    width: 100px;
+    margin-left:50%;
+    left:-30px;
+    text-align: center;
+}
+
+
+ .flower {
+    height:20%;
+    width: 40%;
+    left: 10%;
+    top: 8%;
+/*    border: 1px solid orchid;*/
+    position: absolute;
+    white-space: pre;
+    color: thistle;
+    font-size: 6px;
+
+ }
+
+ .stem {
+    height: 50%;
+    width: 6.8%;
+    top:30%;
+    left: 43.3%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+  .stem2 {
+    height: 49.4%;
+    width: 7%;
+    left: 42.2%;
+    top:30%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+
+ .root {
+    height: 10%;
+    width: 35%;
+    top: 80%;
+    left: 8%;
+    left: 1px solid darkseagreen;
+    border: 1px solid darkseagreen;
+    border-top: 1px solid transparent;
+    position: absolute;
+ }
+
+ .root2 {
+    height: 10%;
+    width: 33.3%;
+    top: 79.3%;
+    left: 8.7%;
+    left: 1px solid darkseagreen;
+    border: 1px solid darkseagreen;
+    border-top: 1px solid transparent;
+    position: absolute;
+ }
+
+ .root3 {
+    height: 1%;
+    width: 5%;
+    top: 89%;
+    left: 63%;
+    left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    border-left: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .root4 {
+    height: 7%;
+    width: 5%;
+    top: 83%;
+    left: 85%;
+    left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .root5 {
+    height: 12%;
+    width: 9%;
+    top: 0%;
+    left: 6%;
+    left: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    border-left: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .root6 {
+    height: 10%;
+    width: 12%;
+    top: 0%;
+    left: 78%;
+    left: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+.branch1 {
+    height: 15%;
+    width: 19.8%;
+    left: 43.3%;
+    top: 67%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branch2 {
+    height: 5%;
+    width: 40%;
+    left: 50%;
+    top: 63%;
+    border-right: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branch3 {
+    height: 15%;
+    width: 10%;
+    left: 39%;
+    top: 53%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+.branch4 {
+    height: 10%;
+    width: 10%;
+    left: 50%;
+    top: 48%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ } 
+
+.branch5 {
+    height: 10%;
+    width: 8%;
+    left: 50%;
+    top: 35%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ } 
+
+.branch6 {
+    height: 8%;
+    width: 4%;
+    left: 50%;
+    top: 30%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ } 
+
+.branch7 {
+    height: 3%;
+    width: 12%;
+    left: 37%;
+    top: 46%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ } 
+
+.branch8 {
+    height: 6%;
+    width: 13%;
+    left: 36%;
+    top: 30%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ } 
+
+ .branchlett {
+    height: 3%;
+    width: 3%;
+    left: 54%;
+    top: 28%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+}
+
+.branchlett1 {
+    height: 3%;
+    width: 2.6%;
+    left: 54%;
+    top: 27.6%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett2 {
+    height: 9%;
+    width: 2.6%;
+    left: 58%;
+    top: 27.6%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett3 {
+    height: 9%;
+    width: 2%;
+    left: 58%;
+    top: 27.2%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+.branchlett4 {
+    height: 9%;
+    width: 1.5%;
+    left: 58%;
+    top: 26.8%;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett5 {
+    height: 4%;
+    width: 1.5%;
+    left: 34.4%;
+    top: 26.8%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+.branchlett6 {
+    height: 4%;
+    width: 2%;
+    left: 33.8%;
+    top: 27.4%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett7 {
+    height: 3%;
+    width: 2%;
+    left: 47%;
+    top: 28%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett8 {
+    height: 3%;
+    width: 2.6%;
+    left: 46.4%;
+    top: 28.6%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+ .branchlett9 {
+    height: 3%;
+    width: 3.3%;
+    left: 45.7%;
+    top: 29.1%;
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    position: absolute;
+ }
+
+
+#iChing {
+    float: left;
+    width: 40px;
+    height: 35px;
+    text-align: right;
+    position: absolute;
+    top: 370px;
+    right: 20%;
+ }
+
+ #iChing a {
+    color: whitesmoke;
+ }
+
+#iChing a:hover {
+    color: cyan !important;
+ }
+
+#hopper a{ 
+    float: left;
+    width: 60px;
+    height: 43px;
+    position: absolute;
+    top: 420px;
+    left: 40px;
+ }
+
+ #hopper a:hover{
+    background-image: url(img/hopper1.png);
+ }
+
+
+/*.rightBook img {
+	margin-left: 32%;
+	margin-top: 20%;
+	width: 30%;
+	height: 30%;
+	border: 1px solid tomato;
+	padding: 20px;
+	}*/
+
+/*.rightBook img {
+	margin-left: 32%;
+	margin-top: 20%;
+	width: 30%;
+	height: 30%;
+	border: 1px solid tomato;
+	padding: 20px;
+	}	
+*/
+
+.rightBook img {
+	margin-left: 32%;
+	margin-top: 20%;
+	width: 30%;
+	height: 30%;
+	border: 1px solid tomato;
+	padding: 20px;
+	}	
+
+

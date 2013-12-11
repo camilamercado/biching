@@ -1,0 +1,252 @@
+
+
+ #left3 { 
+    border-top:1px double magenta;
+    border-left:1px double cyan;
+    border-bottom:1px double magenta;
+    width: 49%;
+    float: left;
+    min-height: 1000px;
+    height: auto;
+    background-color: black;
+ }
+
+
+.timeline0 {
+    width: 80%;
+    margin-left: 14%;
+    margin-top: 50px;
+    height: 250px;
+    border: 1px solid tomato;
+}
+
+.timeImg3 {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.tl_upper3, .tl_base3 {
+    width: 80px;
+    height: 28px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    /*border: 1px solid whitesmoke;*/
+
+}
+
+
+.stamp3 {
+    float: left;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: auto;
+    width: 200px;
+}
+
+.date3, .name3, .hour3 {
+    float: left;
+    width: 200px;
+    height: 20px;
+    color: tomato;
+    font-family: "andale mono";
+    font-size: 16px;
+    border: none;
+}
+
+
+.story3 {
+    float: left;
+    width: 87.5%;
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 80px;
+    border: 1px solid tomato;
+    color: tomato;
+    font-family: "andale mono";
+    font-size: 18px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+
+ #right3 { 
+    border-top:1px double magenta;
+    border-right:1px double cyan;
+    border-bottom:1px double magenta;
+    width: 50%;
+    left:49.1%;
+    min-height: 1000px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    /*display: none;*/
+ }
+
+  #right3B { 
+    border-top:1px double magenta;
+    border-right:1px double cyan;
+    border-bottom:1px double magenta;
+    width: 50%;
+    float: left;
+    height: 1000px;
+    background-color: white;
+    /*display: none;*/
+ }
+
+
+ .timeStamp3 {
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 40px;
+ }
+
+.dateR3, .hourR3 {
+    font-family: "andale mono";
+    color: black;
+    font-size: 14px;
+    width: 47.5%;
+    float: left;
+    height: auto;
+    /*border: 1px solid cyan;*/
+}
+
+.hourR3 {
+    text-align: right;
+}
+
+.narrate3 {
+    color: grey;
+    font-size: 18px;
+}
+
+.narrate3:hover {
+    color: tomato;
+    font-size: 18px;
+}
+
+.hexVal3 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hexName3, .hexNum3, .hexTrait3 {
+    font-family: "andale mono";
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin: 10px;
+    
+}
+
+.narrative3 {
+
+    width: 85%;
+    margin-left: 5%;
+    margin-right:5%;
+    height: auto; 
+    background: ghostwhite;
+    line-height: 24px;
+    font-family: "andale mono" !important;
+    font-size: 16px;    
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+.circle3 {
+    margin-left: 50%;
+    left: -15px;
+    position: relative;
+    width: 3.2em; height: 3.2em; 
+    -webkit-border-radius: 5em; -moz-border-radius: 5em;
+    
+    background: black;
+    border: 3px solid #9FD29E;
+  }
+
+  p {
+    text-align: center; margin-top: 4.5em;
+  }
+
+.hexNum3 {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    line-height: 50px;
+    color: tomato !important;
+    background: none;
+    /*background-image: url(img/circle2.png); */
+}
+
+input {
+    border: none;
+}
+
+#left3 .timeline0,
+#left3 .count_1,
+#left3 .count_2,
+#left3 .count_3,
+#left3 .count_4,
+#left3 .count_5,
+#left3 .count_6,
+#left3 .count_7,
+#left3 .count_8,
+#left3 .count_9,
+#left3 .count_10,
+#left3 .count_11,
+#left3 .count_12,
+#left3 .count_13,
+#left3 .count_14,
+#left3 .count_15,
+#left3 .count_16,
+#left3 .count_17,
+#left3 .count_18,
+#left3 .count_19,
+#left3 .count_20,
+#left3 .count_21,
+#left3 .count_22,
+#left3 .count_23,
+#left3 .count_24,
+#left3 .count_25 {
+    width: 80%;
+    margin-left: 14%;
+    margin-top: 50px;
+    height: 250px;
+    border: 1px solid tomato;
+}
+
+#right3 .page,
+#right3 .page_1,
+#right3 .page_2,
+#right3 .page_3,
+#right3 .page_4,
+#right3 .page_5,
+#right3 .page_6,
+#right3 .page_7,
+#right3 .page_8,
+#right3 .page_9,
+#right3 .page_10,
+#right3 .page_11,
+#right3 .page_12,
+#right3 .page_13,
+#right3 .page_14,
+#right3 .page_15,
+#right3 .page_16,
+#right3 .page_17,
+#right3 .page_18,
+#right3 .page_19,
+#right3 .page_20,
+#right3 .page_21,
+#right3 .page_22,
+#right3 .page_23,
+#right3 .page_24,
+#right3 .page_25 {
+    width: 100%;
+    height:100%;
+    display:none;
+}

@@ -1,0 +1,308 @@
+ body {
+ 	font-family: "andale mono";
+/* 	background-color: whitesmoke;*/
+ 	background-color: whitesmoke;
+ }
+
+
+ #nav {
+ 	width: 100%;
+ 	height: 35px;
+ 	background-color: whitesmoke;
+ 	font-style: italic;
+ 	border-bottom: 1px double magenta; 
+ 	font-size: 14px;
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0px;
+ 	display: none;
+
+ }
+
+ a {
+ 	text-decoration: none;
+ 	color: black;
+ }
+
+
+ #sideNav {
+ 	height: 280px;
+ 	width: 55px;
+ 	background-color: snow;
+ 	font-style: italic;
+ 	border-right: 1px double magenta;
+ 	border-bottom: 1px double cyan;  
+ 	font-size: 14px;
+ 	position: fixed;
+ 	float: left;
+ 	z-index: 3;
+ /*	left: 0px;*/
+ 	/*top: 35px;*/
+
+ }
+
+ .zero, .one, .two, .three, .four, .five {
+ 	text-align: center;
+ 	margin-top: 40px;
+ 	color: orchid;
+ 	width: 35px;
+ 	height: 35px;
+ 	margin-left: 10%;
+ }
+
+   .zero:hover, .one:hover, .two:hover, .three:hover, .four:hover, .five:hover {
+ 	color: deepskyblue;
+
+ }
+
+ hr {
+ 	border-color: 1px solid cyan;
+ 	margin: 0px;
+ 	margin-top: 3px;
+ }
+
+
+#hexagram {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+#timeline {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+
+ #left { 
+	border-top:1px double magenta;
+ 	border-left:1px double cyan;
+ 	border-bottom:1px double magenta;
+ 	width: 48.9%;
+ 	float: left;
+ 	min-height: 1300px;
+ 	height: auto;
+ 	background-color: black;
+ 	left: 0px;
+ 	/*display: none;*/
+ }
+
+ .Menu {
+ 	margin-top: 18px;
+	margin-right: 50px;
+	float: right;
+ }
+
+.HexP, .TimeN {
+	font-family: "andale mono";
+	color: #9FD29E;
+	font-size: 18px;
+	width: 100%;
+	margin: 6px;
+	text-align: right;
+}
+
+.HexP {
+	color: grey;
+}
+
+.TimeN:hover {
+	color: tomato;
+}
+
+.triImg {
+	margin-top:155px;
+	position: relative;
+	z-index: 1;
+	margin-left: 50%;
+	left: -45px;
+}
+
+.upper, .base {
+	width: 80px;
+	height: 28px;
+	margin: 10px;
+	background-repeat: no-repeat;
+
+}
+
+
+iframe {
+    width: 70%;
+    margin-left: 15%;
+    height: 800px;
+    margin-top:35px;
+    border: none;
+     color: white; 
+    background: black;  
+}
+
+#leftTime #divination
+{
+    white-space: pre;
+    color: white!important; 
+    background: black!important;   
+    font-size: 12px;
+}
+
+
+ .record {
+ 	width: 70%;
+ 	margin-left: 15%;
+ 	height: 800px;
+ 	color: tomato;
+ 	margin-top:40px;
+ 	white-space: pre;
+ 	background: black;
+ 	font-size: 16px;
+ 	border: 1px solid tomato;
+ 	font-family: "andale mono";
+    display: none;
+ }
+
+ .entered {
+ 	position: absolute;
+	top: 320px;
+	left: 42%;
+	width: 30px;
+	height: 150px;
+	background: tomato;
+	color: black;
+	text-align: center;
+	padding-top: 15px;
+
+ }
+
+ .entered:hover {
+ 	background: cyan;
+ }
+
+
+
+ #right { 
+ 	border-top:1px double magenta;
+ 	border-right:1px double cyan;
+ 	border-bottom:1px double magenta;
+ 	width: 50.9%;
+ 	float: left;
+ 	min-height: 1300px;
+ 	height: auto;
+ 	background-color: white;
+
+ }
+
+
+
+ .timeStamp {
+ 	margin-top: 20px;
+	margin-left: 40px;
+ }
+
+ .timeStamp input {
+	font-family: "andale mono";
+	color: #9FD29E!important;
+	font-size: 18px!important;
+	width: 90%!important;
+}
+
+.narrate {
+	color: tomato;
+	font-size: 18px;
+}
+
+/*.narrate:hover {
+	color: tomato;
+	font-size: 18px;
+}
+*/
+.hexVal {
+	width: 100%;
+	height: auto;
+
+}
+
+.hexName, .hexNum, .hexTrait {
+	font-family: "andale mono";
+	color: #9FD29E;
+	font-size: 18px;
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	margin: 10px;
+	background: none;
+}
+
+
+.circle {
+	margin-left: 50%;
+	left: -15px;
+	position: relative;
+    width: 3.2em; height: 3.2em; 
+    -webkit-border-radius: 5em; -moz-border-radius: 5em;
+    background: tomato;
+  }
+
+  p {
+    text-align: center; margin-top: 4.5em;
+  }
+
+.hexNum {
+	width: 48px;
+	height: 48px;
+	margin: auto;
+	color: white;
+	background: none;
+	/*background-image: url(img/circle2.png); */
+}
+
+input {
+	border: none;
+}
+
+iframe {
+    border-image-width:0;
+}
+
+.myiframe {
+	width: 90%;
+	margin-left: 15%;
+	height: 900px;
+	border: none;
+	font-family: "andale mono" !important;
+    border-image-width:0;
+
+}
+
+
+.narrative {
+
+	width: 70%;
+    margin-top: 10px;
+	margin-left: 15%;
+	margin-right:0px;
+	height: 800px;
+	border: 1px solid #9FD29E;
+	font-family: "andale mono" !important;
+	font-size: 16px;
+/*	display: none;*/
+	
+
+}
+
+.publish {
+	width: 20px;
+	float: left;
+	height: auto;
+	color: tomato;
+	position: absolute;
+	top: 320px;
+	right: 5.8%;
+	/*display: none;*/
+}
+
+.publish:hover {
+	color: cyan;
+}
+
+
