@@ -199,6 +199,16 @@ iframe {
 	width: 90%!important;
 }
 
+.arrow {
+	position: absolute;
+	width: 40px;
+	margin-left: 70px;
+	margin-top: 10px;
+	height: 200px;
+	border-bottom: 1px solid cyan;
+	border-left: 1px solid cyan;
+}
+
 .narrate {
 	color: tomato;
 	font-size: 18px;
@@ -279,8 +289,6 @@ iframe {
 	font-family: "andale mono" !important;
 	font-size: 16px;
 /*	display: none;*/
-	
-
 }
 
 .publish {
