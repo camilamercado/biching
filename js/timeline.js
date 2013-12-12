@@ -2,7 +2,7 @@
 
 histories.on('child_added', function(hist){
 
-            document.querySelector(".entryCount").value=count;
+      //document.querySelector(".entryCount").value=count;
 
 			console.log(hist.val())
 			//console.log(hist.val().narrate)
@@ -34,23 +34,13 @@ histories.on('child_added', function(hist){
 
             tmpl.find('.story3').text(hist.val().narrate);
 
-            // tmpl.find(".timeline0").each(function(index){
-            //    $(".timeline0").addClass( 'count_'+ hist.val().count );
-            // })
             
             var amt = $("#left3 .date3").length;
             console.log(amt);
             
-            // if (amt === 0){
-            //     document.querySelector(".entryCount").innerHTML=amt + 1;
-            // } else {
-            //     document.querySelector(".entryCount").innerHTML=amt + 1;
-            // }
-
             document.querySelector(".entryCount").innerHTML=amt+1;
 
-
-            tmpl.find(".timeline0").text($( ".timeline0" ).attr( "class",'count_'+ amt ));
+           tmpl.find(".timeline0").text($( ".timeline0" ).attr( "class",'count_'+ amt ));
 
 
             // $("#timeline0").attr('class','count_'+ count);
@@ -280,6 +270,41 @@ histories.on('child_added', function(hist){
           
           $( ".page_21").show();
           $('#right3 > :not(.page_21)').hide();
+        
+        });
+
+        $( ".count_22" ).hover(function() {
+          
+          $( ".page_22").show();
+          $('#right3 > :not(.page_22)').hide();
+        
+        });
+
+        $( ".count_23" ).hover(function() {
+          
+          $( ".page_23").show();
+          $('#right3 > :not(.page_23)').hide();
+        
+        });
+
+        $( ".count_24" ).hover(function() {
+          
+          $( ".page_24").show();
+          $('#right3 > :not(.page_24)').hide();
+        
+        });
+
+        $( ".count_25" ).hover(function() {
+          
+          $( ".page_25").show();
+          $('#right3 > :not(.page_25)').hide();
+        
+        });
+
+        $( ".count_26" ).hover(function() {
+          
+          $( ".page_26").show();
+          $('#right3 > :not(.page_26)').hide();
         
         });
 
