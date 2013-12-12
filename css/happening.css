@@ -205,8 +205,8 @@ iframe {
 	margin-left: 70px;
 	margin-top: 10px;
 	height: 200px;
-	border-bottom: 1px solid cyan;
-	border-left: 1px solid cyan;
+	border-bottom: 1px solid #9FD29E;
+	border-left: 1px solid #9FD29E;
 }
 
 .narrate {
@@ -242,7 +242,8 @@ iframe {
 	left: -15px;
 	position: relative;
     width: 3.2em; height: 3.2em; 
-    -webkit-border-radius: 5em; -moz-border-radius: 5em;
+    -webkit-border-radius: 5em; 
+    -moz-border-radius: 5em;
     background: tomato;
   }
 

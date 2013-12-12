@@ -37,8 +37,20 @@ histories.on('child_added', function(hist){
             // tmpl.find(".timeline0").each(function(index){
             //    $(".timeline0").addClass( 'count_'+ hist.val().count );
             // })
+            
+            var amt = $("#left3 .date3").length;
+            console.log(amt);
+            
+            // if (amt === 0){
+            //     document.querySelector(".entryCount").innerHTML=amt + 1;
+            // } else {
+            //     document.querySelector(".entryCount").innerHTML=amt + 1;
+            // }
 
-            tmpl.find(".timeline0").text($( ".timeline0" ).attr( "class",'count_'+ hist.val().count ));
+            document.querySelector(".entryCount").innerHTML=amt+1;
+
+
+            tmpl.find(".timeline0").text($( ".timeline0" ).attr( "class",'count_'+ amt ));
 
 
             // $("#timeline0").attr('class','count_'+ count);
@@ -47,8 +59,9 @@ histories.on('child_added', function(hist){
             	tmpl
             );
 
-            var amt = $("#left3 .date3").length;
-            document.querySelector(".entryCount").innerHTML=amt;
+            // var amt = $("#left3 .date3").length;
+            // console.log(amt);
+            // document.querySelector(".entryCount").innerHTML=amt;
 
             //Right timeline
 
@@ -83,16 +96,12 @@ histories.on('child_added', function(hist){
             pagetmpl.find('.narrative3').text(hist.val().narrate);
             
 
-           $(".page").attr('class','page_'+ count);
+           // $(".page").attr('class','page_'+ count);
 
-            
-            
-            // var pageCount = ('class','count_'+ count);
-            // $("#page").attr(pageCount);
-            
-            // var currentPage = $('#page').classList;
-            // console.log(currentPage);
-            tmpl.find(".page").text($( ".page" ).attr( "class",'count_'+ hist.val().count ));
+
+            var bruta = amt - 1;
+            console.log(bruta);
+            tmpl.find(".page").text($( ".page" ).attr( "class",'page_' + amt ));
 
             $('#right3').append(
                 pagetmpl
