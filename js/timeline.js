@@ -131,18 +131,14 @@ histories.on('child_added', function(hist){
           
           
           $( ".page").show();
-          $( ".page_3").hide();
-          $( ".page_2").hide();
-          $( ".page_1").hide();
+          $('#right3 > :not(.page)').hide();
         
         });
 
          $( ".count_1" ).hover(function() {
           
-          $( ".page_1").show();
-          $( ".page").hide();
-          $( ".page_2").hide();
-          $( ".page_3").hide();
+           $( ".page_1").show();
+          $('#right3 > :not(.page_1)').hide();
         
         });
 
@@ -150,20 +146,145 @@ histories.on('child_added', function(hist){
         $( ".count_2" ).hover(function() {
           
           $( ".page_2").show();
-          $( ".page").hide();
-          $( ".page_3").hide();
-          $( ".page_1").hide();
+          $('#right3 > :not(.page_2)').hide();
         
         });
 
         $( ".count_3" ).hover(function() {
           
           $( ".page_3").show();
-          $( ".page").hide();
-          $( ".page_2").hide();
-          $( ".page_1").hide();
+          $('#right3 > :not(.page_3)').hide();
         
         });
+
+        $( ".count_4" ).hover(function() {
+          
+          $( ".page_4").show();
+          $('#right3 > :not(.page_4)').hide();
+        
+        });
+
+        $( ".count_5" ).hover(function() {
+          
+          $( ".page_5").show();
+          $('#right3 > :not(.page_5)').hide();
+        
+        });
+
+        $( ".count_6" ).hover(function() {
+          
+          $( ".page_6").show();
+          $('#right3 > :not(.page_6)').hide();
+        
+        });
+
+        $( ".count_7" ).hover(function() {
+          
+          $( ".page_7").show();
+          $('#right3 > :not(.page_7)').hide();
+        
+        });
+
+        $( ".count_8" ).hover(function() {
+          
+          $( ".page_8").show();
+          $('#right3 > :not(.page_8)').hide();
+        
+        });
+
+        $( ".count_9" ).hover(function() {
+          
+          $( ".page_9").show();
+          $('#right3 > :not(.page_9)').hide();
+        
+        });
+
+        $( ".count_10" ).hover(function() {
+          
+          $( ".page_10").show();
+          $('#right3 > :not(.page_10)').hide();
+        
+        });
+
+        $( ".count_11" ).hover(function() {
+          
+          $( ".page_11").show();
+          $('#right3 > :not(.page_11)').hide();
+        
+        });
+
+        $( ".count_12" ).hover(function() {
+          
+          $( ".page_12").show();
+          $('#right3 > :not(.page_12)').hide();
+        
+        });
+
+        $( ".count_13" ).hover(function() {
+          
+          $( ".page_13").show();
+          $('#right3 > :not(.page_13)').hide();
+        
+        });
+
+        $( ".count_14" ).hover(function() {
+          
+          $( ".page_14").show();
+          $('#right3 > :not(.page_14)').hide();
+        
+        });
+
+        $( ".count_15" ).hover(function() {
+          
+          $( ".page_15").show();
+          $('#right3 > :not(.page_15)').hide();
+        
+        });
+
+        $( ".count_16" ).hover(function() {
+          
+          $( ".page_16").show();
+          $('#right3 > :not(.page_16)').hide();
+        
+        });
+
+        $( ".count_17" ).hover(function() {
+          
+          $( ".page_17").show();
+          $('#right3 > :not(.page_17)').hide();
+        
+        });
+
+        $( ".count_18" ).hover(function() {
+          
+          $( ".page_18").show();
+          $('#right3 > :not(.page_18)').hide();
+        
+        });
+
+        $( ".count_19" ).hover(function() {
+          
+          $( ".page_19").show();
+          $('#right3 > :not(.page_19)').hide();
+        
+        });
+
+        $( ".count_20" ).hover(function() {
+          
+          $( ".page_20").show();
+          $('#right3 > :not(.page_20)').hide();
+        
+        });
+
+        $( ".count_21" ).hover(function() {
+          
+          $( ".page_21").show();
+          $('#right3 > :not(.page_21)').hide();
+        
+        });
+
+        
+
 
 
 
