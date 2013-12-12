@@ -197,6 +197,24 @@
     text-align: center;
 }
 
+ .subC a {
+    position: absolute;
+    top: 500px;
+    font-family: "andale mono";
+    color: whitesmoke;
+    font-size: 14px;
+    width: 100px;
+    right:45px;
+    text-align: center;
+}
+
+
+ .subC a:hover {
+    color: cyan;
+}
+
+
+
 
  .flower {
     height:20%;

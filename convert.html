@@ -15,18 +15,8 @@
 			.black {
 				position: absolute;
 				width: 50%;
-				height: 1000px;
+				height: 100%;
 				background: black;
-				float: left;
-				border-bottom: 1px solid tomato;
-			}
-
-			.white {
-				position: absolute;
-				width: 49.4%;
-				height: 500px;
-				background: white;
-				top: 1000px;
 				float: left;
 				border-bottom: 1px solid tomato;
 			}
@@ -35,8 +25,9 @@
 			.splashtop img {
 				position: absolute;
 				margin-left: 50%;
-				left: -193px;
-				margin-top: 5%;
+				left: -170px;
+				margin-top: 15%;
+				
 
 				/*margin-top: 10px;*/
 			}
@@ -78,6 +69,7 @@
 			    width: 100%;
 			    height: 150px;
 			    margin-top: 10px;
+			    font-family: "Andale Mono" !important;
 			}
 
 			#I1 {
@@ -104,6 +96,7 @@
 			    width: 100%;
 			    height: 66px;
 			    margin-top: 10px;
+			    font-family: "Andale Mono" !important;
 			}
 
 			#judgment {
@@ -124,11 +117,10 @@
 
 		<body>	
 
-			<div class="black"><div class="splashtop"><img src="img/coins.png" width="386" height="800"></img></div>
+			<div class="black">
+				<div class="splashtop"><img src="img/coins.png" width="338" height="700"></img></div>
 			</div>
-			<!-- <div class="white"></div>
-			<div class="splashtop"><img src="img/coins.png" width="386" height="800"></img></div> -->
-			
+	
 			<div class="right">
 			<div id="container">
 				
@@ -213,19 +205,22 @@
 		
 											//convert string to numeric value 
 											
+											var yin = " - -  ";
+											var yang = " ---  ";
 												
 												
 												for (var i = 0; i < coin.length; i++) {
 
 													if (coin[i] % 2 === 0) {
 												        
-												        console.log("- - yin");
-												        coin[i] = coin[i].toString().replace(/(.*)/, " - -  ");  
+												        
+												        console.log(yin);
+												        coin[i] = coin[i].toString().replace(/(.*)/, yin);  
 												        
 												    } else {
 												        
-												        console.log("--- yang");
-														coin[i] = coin[i].toString().replace(/(.*)/, " ---  ");
+												        console.log(yang);
+														coin[i] = coin[i].toString().replace(/(.*)/, yang);
 												        
 												    }
 
@@ -234,6 +229,7 @@
 												// for each array substring find out if numerical value is evenly devisable by 2. 
 												// If so, replace string using regex from binary to a yin, broken line
 												// If not, replace string using regex from binary to a yang, solid line
+
 
 												
 
@@ -246,7 +242,20 @@
 												document.getElementById("L0").value=coin[0];
 												
 
+												var l5 = document.getElementById("L5").value
+												var l4 = document.getElementById("L4").value
+												var l3 = document.getElementById("L3").value
+												
+												var l2 = document.getElementById("L2").value
+												var l1 = document.getElementById("L1").value
+												var l0 = document.getElementById("L0").value
+												
+
 												// pass coin array values to the HTML and build hexagram
+
+												// console.log(l5);
+
+												
 							}				
 									
 						
