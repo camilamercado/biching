@@ -15,12 +15,18 @@
 			.black {
 				position: absolute;
 				width: 50%;
-				height: 100%;
+				height: 3100px;
 				background: black;
 				float: left;
-				border-bottom: 1px solid tomato;
+				
 			}
 
+			.myiframe {
+				width: 80%;
+				margin-left: 8%;
+				height: 100%;
+				display: none;
+			}
 
 			.splashtop img {
 				position: absolute;
@@ -28,8 +34,6 @@
 				left: -170px;
 				margin-top: 15%;
 
-
-				/*margin-top: 10px;*/
 			}
 
 			.right {
@@ -37,14 +41,14 @@
 				width: 49%;
 				height: 100%;
 				float: right;
-				left: 54%;
+				left: 59%;
 				
 			}
 
 			#container {
 				top: 100px;
-				width: 90%;
-				height: 90%;
+				width: 80%;
+				height: 100%;
 				font-family: "Andale Mono" !important;
 				margin-top: 0px;
 			}
@@ -58,7 +62,7 @@
 
 			#decimal {
 				margin: 20px;
-				width: 90%;
+				width: 80%;
 				height: auto;
 				float: left;
 				margin-bottom: 0px;
@@ -85,7 +89,7 @@
 			#hexagram {
 				margin-top: 0px;
 				margin: 20px;
-				width: 90%;
+				width: 80%;
 				height: auto;
 				float: left;
 			}
@@ -109,6 +113,20 @@
 				font-size: 20px;
 				height: 66px;
 			}
+
+			.link {
+				width: 10px;
+				height: 100px;
+				position: absolute;
+				top: 26%;
+				color: tomato;
+				text-decoration: none;
+			}
+
+			.link:hover{
+				color: cyan;
+			}
+			}
 			
 
 		</style>
@@ -119,6 +137,7 @@
 
 			<div class="black">
 				<div class="splashtop"><img src="img/coins01.png" width="338" height="700"></img></div>
+				<iframe class="myiframe" frameBorder="0" seamless="seamless"></iframe>
 			</div>
 	
 			<div class="right">
@@ -139,6 +158,8 @@
 					<input id="L0" value=""/>
 				</div>	
 
+				<div class="link" onclick="binary();">W<br>H<br>Y</div>
+
 			</div>
 
 				<!-- <div id="judgment">
@@ -149,6 +170,22 @@
 
 				
 				<script>
+
+
+
+					var iframe = document.querySelector(".myiframe"); 
+
+	               	var url = "paper/binary.html";
+	                iframe.src = url;
+
+					function binary() {
+						document.querySelector('.myiframe').style.display="block";
+						document.querySelector('.splashtop').style.display="none";
+					}
+
+
+
+
 
 					var today = new Date();
 					var dd = today.getDate();
