@@ -5,6 +5,8 @@ var histories = new Firebase ('https://camila-mercado.firebaseio.com/storage/his
 $(".publish").on('click', function(){
 
 		var storage = document.querySelector('.narrative').value;
+		var hText = document.querySelector('.myiframe').innerHTML;
+		console.log(hText);
 
 		if(typeof(Storage)!=="undefined")
 		  {
@@ -39,7 +41,8 @@ $(".publish").on('click', function(){
 		 			'trait'    : 	hTrait, 
 		 			'date'     : 	today,  
 		 			'hour'     : 	hours,  
-		 			'narrate'  : 	storage	     
+		 			'narrate'  : 	storage,
+		 			'text'     : 	hText	          
 		 			
 		 		}
 
