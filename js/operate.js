@@ -140,54 +140,7 @@ var hours = hh + ":" + mn ;
 
 			}
 
-			// hexagram visual output 
-			//firm / yeilding / bridge
-
-
-				// if(Hex === "firm") {
-				// 		document.querySelector('#firm').style.display="block";
-				// 		document.querySelector('#yeilding').style.display="none";
-				// 		document.querySelector('#bridge').style.display="none";
-				// 	}
-
-				// 	else if(Hex === "yeilding") {
-				// 		document.querySelector('#yeilding').style.display="block";
-				// 		document.querySelector('#firm').style.display="none";
-				// 		document.querySelector('#bridge').style.display="none";
-				// 	}
-
-				// 	else {
-				// 		document.querySelector('#bridge').style.display="block";
-				// 		document.querySelector('#firm').style.display="none";
-				// 		document.querySelector('#yeilding').style.display="none";
-				// 	}
-
-// end calculations
-
-
-
-
-// page display functions
-
-
-
-// function narrate() {
-
-// 		document.querySelector('.narrative').style.display="block";
-// 		document.querySelector('.publish').style.display="block";
-// 		document.querySelector('#yeilding').style.display="none";
-// 		document.querySelector('#firm').style.display="none";
-// 		document.querySelector('#bridge').style.display="none";
-
-// }
-
-// function describe() {
-
-// 		document.querySelector('.narrative').style.display="none";
-// 		document.querySelector('.myiframe').style.display="block";
-// 		document.querySelector('.publish').style.display="none";
-
-// }
+	
 
 document.querySelector(".entryCount").value="xxx";
 
@@ -217,12 +170,14 @@ function timeline() {
 
 }
 
-// function show() {
+function lead() {
 
-// 		document.querySelector('#right3').style.display="block";
+		document.querySelector('.arrow').style.display="block";
+		document.querySelector('.narrative').style.border="1px solid tomato";
+		document.querySelector('textarea').style="focus";
 
 
-// }
+}
 
 function hexagram() {
 

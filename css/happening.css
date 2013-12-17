@@ -202,13 +202,14 @@ iframe {
 }
 
 .arrow {
+	display: none;
 	position: absolute;
 	width: 40px;
 	margin-left: 70px;
 	margin-top: 10px;
 	height: 200px;
-	border-bottom: 1px solid #9FD29E;
-	border-left: 1px solid #9FD29E;
+	border-bottom: 1px solid tomato;
+	border-left: 1px solid tomato;
 }
 
 .narrate {
@@ -216,11 +217,11 @@ iframe {
 	font-size: 18px;
 }
 
-/*.narrate:hover {
-	color: tomato;
+.narrate:hover {
+	color: cyan;
 	font-size: 18px;
 }
-*/
+
 .hexVal {
 	width: 100%;
 	height: auto;
