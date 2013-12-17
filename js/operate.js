@@ -9,8 +9,9 @@ var mm = today.getMonth()+1;
 var yyyy = today.getFullYear();
 var hh = today.getHours();
 var mn = today.getMinutes();
+var ss = today.getSeconds();
 
-var hours = hh + ":" + mn;
+var hours = hh + ":" + mn ;
 	
 	if(dd<10){dd='0'+dd} 
 	if(mm<10){mm='0'+mm} 
@@ -27,12 +28,8 @@ var hours = hh + ":" + mn;
 	console.log(mm);
 	console.log(yyyy);
 	console.log(hh);
+	console.log(ss);
 
-
-	// begin calculating hexagram 
-	//by finding date values in earthly branches
-	
-	//find year branch
 
 	for(var i = 0; i < earthlyBranches.length; i++) {
 		if(earthlyBranches[i].year === yyyy) {

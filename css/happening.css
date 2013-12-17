@@ -12,10 +12,10 @@
 
 
  #sideNav {
- 	height: 280px;
+ 	height: 350px;
  	width: 55px;
  	background-color: snow;
- 	font-style: italic;
+ 	/*font-style: italic;*/
  	border-right: 1px double magenta;
  	border-bottom: 1px double cyan;  
  	font-size: 14px;
@@ -29,6 +29,7 @@
 
  .zero {
  	color: deepskyblue;
+ 	margin-top: 40px!important;
  }
 
  .one, .two {
@@ -37,11 +38,12 @@
 
  .zero, .one, .two {
  	text-align: center;
- 	margin-top: 40px;
+ 	margin-top: 60px;
  	width: 35px;
  	height: 35px;
  	margin-left: 10%;
  }
+
 
    .zero:hover, .one:hover, .two:hover{
  	color: deepskyblue!important;
