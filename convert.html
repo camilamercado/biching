@@ -62,11 +62,11 @@
 			}
 
 			#container {
-				top: 100px;
+				top: 300px;
 				width: 80%;
 				height: 100%;
 				font-family: "Andale Mono" !important;
-				margin-top: 0px;
+				margin-top: 30px;
 			}
 
 			input {
@@ -103,20 +103,31 @@
 			}
 
 			#hexagram {
-				margin-top: 0px;
-				margin: 20px;
+				margin-top: 12px!important;
+				margin-left: 22px;
 				width: 80%;
-				height: auto;
+				height: 370px;
 				float: left;
+				background: white;
 			}
 
-			#hexagram input {
+			#hexagram div {
 				font-size: 50px;
 			    text-align: center;
-			    width: 100%;
-			    height: 66px;
-			    margin-top: 10px;
+			    width: 200px;
+			    height: 15px;
+			    margin-top: 15px!important;
 			    font-family: "Andale Mono" !important;
+			    margin: auto;
+			}
+
+			#hexagram #L5 {
+				margin-top: 100px !important;
+			}
+
+
+			#hexagram #L2 {
+				margin-top: 30px !important;
 			}
 
 			#judgment {
@@ -148,6 +159,40 @@
 				display: none;
 			}
 
+			.yang {
+				margin-top: 20px;
+				height: 20px;
+				width: 150px;
+				background: #9FD29E;
+			}
+
+			.yin {
+				margin-top: 20px;
+				height: 20px;
+				width: 150px;
+			}
+
+			.yin .broken {
+				height: 20px;
+				width: 70px;
+				background: #9FD29E;
+				z-index: 4;
+				float: left;
+				position: absolute;
+			}
+
+			.yin .broken2 {
+				height: 20px;
+				width: 70px;
+				background: #9FD29E;
+				z-index: 4;
+				float: left;
+				margin-left: 80px;
+				position: absolute;
+			}
+
+
+
 		</style>
 
     </head>
@@ -178,13 +223,13 @@
 					</div>
 
 					<div id="hexagram">
-						<input id="L5" value=""/>
-						<input id="L4" value=""/>
-						<input id="L3" value=""/>
-						
-						<input id="L2" value=""/>
-						<input id="L1" value=""/>
-						<input id="L0" value=""/>
+						<div id="L5" value=""></div>
+						<div id="L4" value=""></div>
+						<div id="L3" value=""></div>
+
+					<div id="L2" value=""></div>
+						<div id="L1" value=""></div>
+						<div id="L0" value=""></div>
 					</div>	
 
 					<div class="link" onclick="binary();">W<br>H<br>Y</div>
@@ -292,41 +337,91 @@
 													if (coin[i] % 2 === 0) {
 												        
 												        
-												        console.log(yin);
-												        coin[i] = coin[i].toString().replace(/(.*)/, yin);  
+												        // console.log(yin);
+												        coin[i] = "url(img/numbers/yin.png)"
+												        // document.querySelector('.upper').style.backgroundImage=coin[i];
+												  //       coin[i]  = '<div class="yin">\
+														// 		<div class="broken"></div>\
+														// 		<div class="broken2"></div>\
+														// 	</div>'
+														// coin[i] = $(coin[i]);
+														// console.log(coin[i]);
 												        
 												    } else {
-												        
+												    	coin[i] = "url(img/numbers/yang.png)"
+												        // document.querySelector('.base').style.backgroundImage=coin[i];
 												        console.log(yang);
-														coin[i] = coin[i].toString().replace(/(.*)/, yang);
-												        
+														// coin[i] = '<div class="yang"></div>'
+												  //       coin[i] = $(coin[i]);
 												    }
 
 												}
+
+												
 
 												// for each array substring find out if numerical value is evenly devisable by 2. 
 												// If so, replace string using regex from binary to a yin, broken line
 												// If not, replace string using regex from binary to a yang, solid line
 
-
 												
 
-												document.getElementById("L5").value=coin[5];
-												document.getElementById("L4").value=coin[4];
-												document.getElementById("L3").value=coin[3];
+													// $('#L5').append(
+										   //          	coin[5]
+										   //          );
 
-												document.getElementById("L2").value=coin[2];
-												document.getElementById("L1").value=coin[1];
-												document.getElementById("L0").value=coin[0];
+										   //          $('#L4').append(
+										   //          	coin[4]
+										   //          );
+
+										   //          $('#L3').append(
+										   //          	coin[3]
+										   //          );
+
+										   //          $('#L2').append(
+										   //          	coin[2]
+										   //          );
+
+										   //          $('#L1').append(
+										   //          	coin[1]
+										   //          );
+
+										   //          $('#L0').append(
+										   //          	coin[0]
+										   //          );
+
+
+
+												
+										   //         document.querySelector('.upper').style.backgroundImage=triUpper;
+												document.getElementById("L5").style.backgroundImage=coin[5];
+												document.getElementById("L4").style.backgroundImage=coin[4];
+												document.getElementById("L3").style.backgroundImage=coin[3];
+
+												document.getElementById("L2").style.backgroundImage=coin[2];
+												document.getElementById("L1").style.backgroundImage=coin[1];
+												document.getElementById("L0").style.backgroundImage=coin[0];
+
+
+
+
+
+
+												//document.querySelector('#L5').style.backgroundImage=coin[5];
+												// document.getElementById("L4").value=coin[4];
+												// document.getElementById("L3").value=coin[3];
+
+												// document.getElementById("L2").value=coin[2];
+												// document.getElementById("L1").value=coin[1];
+												// document.getElementById("L0").value=coin[0];
 												
 
-												var l5 = document.getElementById("L5").value
-												var l4 = document.getElementById("L4").value
-												var l3 = document.getElementById("L3").value
+												// var l5 = document.getElementById("L5").value
+												// var l4 = document.getElementById("L4").value
+												// var l3 = document.getElementById("L3").value
 												
-												var l2 = document.getElementById("L2").value
-												var l1 = document.getElementById("L1").value
-												var l0 = document.getElementById("L0").value
+												// var l2 = document.getElementById("L2").value
+												// var l1 = document.getElementById("L1").value
+												// var l0 = document.getElementById("L0").value
 												
 
 												// pass coin array values to the HTML and build hexagram
