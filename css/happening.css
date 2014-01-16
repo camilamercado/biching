@@ -194,7 +194,17 @@ iframe {
 	margin-left: 40px;
  }
 
- .timeStamp input {
+.timeD,
+.timeH, 
+.timeS {
+	font-family: "andale mono";
+	color: #9FD29E!important;
+	font-size: 18px!important;
+	width: 90%!important;
+}
+
+.hours,
+.date {
 	font-family: "andale mono";
 	color: #9FD29E!important;
 	font-size: 18px!important;

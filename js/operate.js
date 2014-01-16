@@ -19,10 +19,7 @@ var hours = hh + ":" + mn ;
 
 	// output to html
 
-	document.querySelector(".date").value=today;
-	document.querySelector(".timeD").value=today;
-	document.querySelector(".hours").value=hours;
-	document.querySelector(".timeH").value=hours;
+	
 	console.log(today);
 	console.log(dd);
 	console.log(mm);
@@ -70,7 +67,7 @@ var hours = hh + ":" + mn ;
 				
 				var triUpper = "url(img/trigrams/" + trigrams[i].number + ".png)"
 				
-				document.querySelector('.upper').style.backgroundImage=triUpper;
+				
 				// document.querySelector('.TLupper').style.backgroundImage=triUpper;
 			}
 
@@ -94,7 +91,7 @@ var hours = hh + ":" + mn ;
 
 				var triBase = "url(img/trigrams/" + trigrams[i].number + ".png)"
 				
-				document.querySelector('.base').style.backgroundImage=triBase;
+				
 				// document.querySelector('.TLbase').style.backgroundImage=triBase;
 
 
@@ -141,68 +138,3 @@ var hours = hh + ":" + mn ;
 			}
 
 	
-
-document.querySelector(".entryCount").value="xxx";
-
-
-function cover() {
-
-		document.querySelector('#cover').style.display="block";
-		document.querySelector('#timeline').style.display="none";
-		document.querySelector('#hexagram').style.display="none";
-
-		document.querySelector('.zero').style.color="deepskyblue";
-		document.querySelector('.one').style.color="orchid";
-		document.querySelector('.two').style.color="orchid";
-
-
-}
-
-function timeline() {
-
-		document.querySelector('#timeline').style.display="block";
-		document.querySelector('#cover').style.display="none";
-		document.querySelector('#hexagram').style.display="none";
-
-		document.querySelector('.one').style.color="deepskyblue";
-		document.querySelector('.zero').style.color="orchid";
-		document.querySelector('.two').style.color="orchid";
-
-}
-
-function lead() {
-
-		document.querySelector('.arrow').style.display="block";
-		document.querySelector('.narrative').style.border="1px solid tomato";
-		document.querySelector('textarea').style="focus";
-
-
-}
-
-function hexagram() {
-
-		document.querySelector('#hexagram').style.display="block";
-		document.querySelector('#cover').style.display="none";
-		document.querySelector('#timeline').style.display="none";
-		document.querySelector('.myiframe').style.display="block";
-		document.querySelector('.record').style.display="none";
-		document.querySelector('.entered').style.display="none";
-
-		document.querySelector('.two').style.color="deepskyblue";
-		document.querySelector('.one').style.color="orchid";
-		document.querySelector('.zero').style.color="orchid";
-}
-
-function narrative() {
-
-		document.querySelector('.record').style.display="block";
-		document.querySelector('.myiframe').style.display="none";
-		document.querySelector('.entered').style.display="block";
-
-}
-
-function hopper() {
-		document.querySelector('.grassHopper' ).style.display="block";
-}
-	
-
