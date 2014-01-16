@@ -1,0 +1,33 @@
+body{
+	background-color: black;
+	font-family: "andale mono";
+}
+
+.container {
+	width: 40%;
+	height: 100px;
+	position: absolute;
+	margin-left: 50%;
+	left: -20%;
+	border: 1px solid tomato;
+}
+
+.timeD, .timeH {
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	color: tomato;
+	height: 45px;
+	width: 100%;
+	text-align: center;
+	color: tomato;
+	background: black;
+	font-size: 32px;
+}
+
+
+
+.date, .hours {
+	display: none;
+}
+

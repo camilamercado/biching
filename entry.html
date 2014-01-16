@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    	<script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    	<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+    	
+        <link rel="stylesheet" type="text/css" href="css/entry.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+<body>
+
+
+
+<div class="container">
+	<div class="timeD"></div>
+    <div class="timeH"></div>
+	<div class="date"></div>
+    <div class="hours"></div>
+</div>
+
+
+</body>
+
+<script src="js/operate.js"></script>
+<script src="js/data.js"></script>
+<script type="text/javascript">
+    
+    document.querySelector(".date").innerHTML=today;
+    document.querySelector(".timeD").innerHTML=today;
+    document.querySelector(".hours").innerHTML=hours;
+    document.querySelector(".timeH").innerHTML=hours;
+
+
+    </script>
+</hmtl>
