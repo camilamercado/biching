@@ -13,24 +13,64 @@
 
 
 <div class="container">
+
+<div class="hex"></div>
+
+<div class="time">    
 	<div class="timeD"></div>
     <div class="timeH"></div>
-	<div class="date"></div>
-    <div class="hours"></div>
 </div>
+
+<div class="coiner">
+        <div class="coin" id="c1" onclick="set();">
+            <div class="hole" id="h1"></div>
+        </div>
+    </div>
+
+
+<div class="text">
+
+</div>
+
+</div>
+
 
 
 </body>
 
-<script src="js/operate.js"></script>
+<!-- <script src="js/operate.js"></script> -->
 <script src="js/data.js"></script>
 <script type="text/javascript">
     
-    document.querySelector(".date").innerHTML=today;
+    var timer=setInterval(function(){count()},1000);
+
+    function count() {
+
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; 
+
+    var yyyy = today.getFullYear();
+    var hh = today.getHours();
+    var mn = today.getMinutes();
+    var ss = today.getSeconds();
+
+    var hours = hh + ":" + mn + ":" + ss;
+        
+        if(dd<10){dd='0'+dd} 
+        if(mm<10){mm='0'+mm} 
+        today = mm+'/'+dd+'/'+yyyy;
+  
     document.querySelector(".timeD").innerHTML=today;
-    document.querySelector(".hours").innerHTML=hours;
     document.querySelector(".timeH").innerHTML=hours;
 
+    }
+
+    function set() {
+
+        clearInterval(timer);
+
+    }
 
     </script>
 </hmtl>
