@@ -14,11 +14,26 @@
 
 <div class="container">
 
-<div class="hex"></div>
+<div class="hex">
+here<br>
+is a<br>
+black box to<br>
+explain this one moment<br>
+<div class="upper"></div>
+<div class="base"></div>
+
+</div>
 
 <div class="time">    
 	<div class="timeD"></div>
+    <div class="timeM"></div>
+    <div class="timeY"></div>
+
+<div class="hourly">
     <div class="timeH"></div>
+    <div class="timeMN"></div>
+    <div class="timeS"></div>
+</div>
 </div>
 
 <div class="coiner">
@@ -29,7 +44,7 @@
 
 
 <div class="text">
-
+<div class="rect"><div>
 </div>
 
 </div>
@@ -42,9 +57,9 @@
 <script src="js/data.js"></script>
 <script type="text/javascript">
     
-    var timer=setInterval(function(){count()},1000);
+    var timer=setInterval(function(){
 
-    function count() {
+    
 
     var today = new Date();
     var dd = today.getDate();
@@ -59,16 +74,62 @@
         
         if(dd<10){dd='0'+dd} 
         if(mm<10){mm='0'+mm} 
-        today = mm+'/'+dd+'/'+yyyy;
-  
-    document.querySelector(".timeD").innerHTML=today;
-    document.querySelector(".timeH").innerHTML=hours;
-
+        today = mm+'/'+dd+'/'+yyyy;for(var i = 0; i < earthlyBranches.length; i++) {
+        if(earthlyBranches[i].year === yyyy) {
+            
+            // console.log(earthlyBranches[i].number);
+            // console.log(earthlyBranches[i].branch);
+            var y1 = earthlyBranches[i].number
+            console.log(y1);
+        }
     }
+  
+    document.querySelector(".timeM").innerHTML=mm + "/";
+    document.querySelector(".timeD").innerHTML=dd + "/";
+    document.querySelector(".timeY").innerHTML=yyyy;
+
+    document.querySelector(".timeH").innerHTML=hh + ":";
+    document.querySelector(".timeMN").innerHTML=mn + ":";
+    document.querySelector(".timeS").innerHTML=ss;
+
+    },1000);
 
     function set() {
 
         clearInterval(timer);
+        
+        var yyyy = document.querySelector(".timeY").innerHTML;
+        var mm = document.querySelector(".timeM").innerHTML;
+        var dd = document.querySelector(".timeD").innerHTML;
+
+        var hh = document.querySelector(".timeH").innerHTML;
+        var mn = document.querySelector(".timeMN").innerHTML;
+        var ss = document.querySelector(".timeS").innerHTML;
+        
+        console.log(yyyy);
+        console.log(mm);
+        console.log(dd);
+
+        console.log(hh);
+        console.log(mn);
+        console.log(ss);
+
+        for(var i = 0; i < earthlyBranches.length; i++) {
+            if(earthlyBranches[i].year === yyyy) {
+                
+                var y1 = earthlyBranches[i].number
+                console.log(y1);
+            }
+        }
+
+        //find hour branch
+
+        for(var i = 0; i < earthlyBranches.length; i++) {
+            if(earthlyBranches[i].hour1 === hh || earthlyBranches[i].hour2 === hh) {
+                
+                console.log(earthlyBranches[i].number);
+            }
+        }
 
     }
 

@@ -19,14 +19,20 @@ body{
 	float: left;
 	width: 100px;
 	height: 500px;
-	border: 1px solid magenta;
+	/*border: 1px solid magenta;*/
+	color: magenta;
+	text-align: right;
 }
 
 .time {
+	padding-top: 10px;
+	padding-left: 10px;
 	float: left;
-	width: 75%;
-	height: 70px;
+	width: 74%;
+	height: 60px;
 	border: 1px solid tomato;
+	font-size: 42px;
+	color: tomato;
 }
 
 .coiner {
@@ -47,22 +53,35 @@ body{
 	border: 1px solid cyan;
 }
 
-.timeD, .timeH, .timeS {
-	padding: 10px;
-	height: 100px;
-	width: 45%;
-	font-size: 42px;
-	color: tomato;
+.rect {
+	width: 100px;
+	float: left;
+	height: 100%;
+	border-right: 1px solid cyan;
 }
 
-.timeD {
+.timeD, .timeM, .timeY {
+	height: 50px;
+	width: auto;
+	font-size: 42px;
+	color: tomato;
 	float: left;
 }
 
-.timeH {
+
+.hourly {
 	float: right;
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
+}
+
+.timeH, .timeMN, .timeS {
+	height: 50px;
+	width: auto;
+	float: left;
 	text-align: right;
-	width: 45%;
+	width: auto;
 }
 
 .coin {
@@ -89,3 +108,11 @@ body{
     background: black;
     border: 1px solid white;
   }
+
+  .upper, .base {
+	width: 80px;
+	height: 28px;
+	margin: 10px;
+	background-repeat: no-repeat;
+
+}
