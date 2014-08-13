@@ -37,13 +37,16 @@ explain this one moment<br>
 </div>
 
 <div class="coiner">
-        <div class="coin" id="c1" onclick="set();">
+        <div class="coin" id="c1" onclick="nameHex();">
             <div class="hole" id="h1"></div>
         </div>
     </div>
 
 
 <div class="text">
+                        <input id="first" value=""/>
+                        <input id="second" value=""/>
+
 <div class="rect"><div>
 </div>
 
@@ -57,10 +60,10 @@ explain this one moment<br>
 <script src="js/data.js"></script>
 <script type="text/javascript">
     
-    var timer=setInterval(function(){
+var timer=setInterval(function(){catcher()},1000);
 
+function catcher () {
     
-
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; 
@@ -74,13 +77,16 @@ explain this one moment<br>
         
         if(dd<10){dd='0'+dd} 
         if(mm<10){mm='0'+mm} 
-        today = mm+'/'+dd+'/'+yyyy;for(var i = 0; i < earthlyBranches.length; i++) {
+        today = mm+'/'+dd+'/'+yyyy;
+
+
+    for(var i = 0; i < earthlyBranches.length; i++) {
         if(earthlyBranches[i].year === yyyy) {
             
             // console.log(earthlyBranches[i].number);
             // console.log(earthlyBranches[i].branch);
             var y1 = earthlyBranches[i].number
-            console.log(y1);
+            //console.log(y1);
         }
     }
   
@@ -92,46 +98,153 @@ explain this one moment<br>
     document.querySelector(".timeMN").innerHTML=mn + ":";
     document.querySelector(".timeS").innerHTML=ss;
 
-    },1000);
+    };
 
-    function set() {
+    // function set() {
 
-        clearInterval(timer);
+    //     clearInterval(timer);
         
-        var yyyy = document.querySelector(".timeY").innerHTML;
-        var mm = document.querySelector(".timeM").innerHTML;
-        var dd = document.querySelector(".timeD").innerHTML;
+    //     var yyyy = document.querySelector(".timeY").innerHTML;
+    //     var mm   = document.querySelector(".timeM").innerHTML;
+    //     var dd   = document.querySelector(".timeD").innerHTML;
 
-        var hh = document.querySelector(".timeH").innerHTML;
-        var mn = document.querySelector(".timeMN").innerHTML;
-        var ss = document.querySelector(".timeS").innerHTML;
+    //     var hh   = document.querySelector(".timeH").innerHTML;
+    //     var mn   = document.querySelector(".timeMN").innerHTML;
+    //     var ss   = document.querySelector(".timeS").innerHTML;
         
-        console.log(yyyy);
-        console.log(mm);
-        console.log(dd);
+    //     var y    = Number(yyyy);
+    //     var m    = Number(mm);
+    //     var d    = Number(dd);
+    //     var h    = Number(hh);
+    //     var min  = Number(mn);
+    //     var s    = Number(ss);
 
-        console.log(hh);
-        console.log(mn);
-        console.log(ss);
+    //     console.log(y);
 
-        for(var i = 0; i < earthlyBranches.length; i++) {
-            if(earthlyBranches[i].year === yyyy) {
+
+    //     for(var i = 0; i < earthlyBranches.length; i++) {
+            
+    //         if(earthlyBranches[i].year === y) {
+    
+    //             var y1 = Number(earthlyBranches[i].number)
+    //             console.log(y1);
+            
+    //         }
+    // }
+
+    // // trigram calculations
+
+    //     // upper trigram calculation
+    //     // year + month + day
+
+    //     var upper = Number((y1 + m + d)%8);
+    //     console.log("upper trigram =");
+    //     console.log(upper);
+        
+
+    //     for(var i = 0; i < trigrams.length; i++) {
+    //         if(trigrams[i].number === upper) {
                 
-                var y1 = earthlyBranches[i].number
-                console.log(y1);
-            }
+    //             console.log(trigrams[i].number);
+    //             var tUpper = trigrams[i].chingName;
+    //             console.log(tUpper);
+                
+    //             var triUpper = "url(img/trigrams/" + trigrams[i].number + ".png)"
+                
+                
+    //             // document.querySelector('.TLupper').style.backgroundImage=triUpper;
+    //         }
+
+    //     }
+
+        
+    //     // base trigram calculation
+    //     // upper value + day
+
+    //     var base = (upper + h)%8;
+    //     console.log(base);
+    //     console.log("base trigram =");
+
+
+    //     for(var i = 0; i < trigrams.length; i++) {
+    //         if(trigrams[i].number === base) {
+                
+    //             console.log(trigrams[i].number);
+    //             var tBase = trigrams[i].chingName;
+    //             console.log(tBase);
+
+    //             var triBase = "url(img/trigrams/" + trigrams[i].number + ".png)"
+                
+                
+    //             // document.querySelector('.TLbase').style.backgroundImage=triBase;
+
+
+    //         }
+
+    //     }   
+
+    // };
+
+
+    function nameHex () {
+        
+        var AlphaNum = {
+
+         "A" : 1  ,
+         "B" : 2  ,
+         "C" : 3  ,
+         "D" : 4  ,
+         "E" : 5  ,
+         "F" : 6  ,
+         "G" : 7  ,
+         "H" : 8  ,
+         "I" : 9  ,
+         "J" : 10 ,
+         "K" : 11 ,
+         "L" : 12 ,
+         "M" : 13 ,
+         "N" : 14 ,
+         "O" : 15 ,
+         "P" : 16 ,
+         "Q" : 17 ,
+         "R" : 18 ,
+         "S" : 19 ,
+         "T" : 20 ,
+         "U" : 21 ,
+         "V" : 22 ,
+         "W" : 23 ,
+         "X" : 24 ,
+         "Y" : 25 ,
+         "Z" : 26 
+        
         }
 
-        //find hour branch
+        console.log(AlphaNum);
 
-        for(var i = 0; i < earthlyBranches.length; i++) {
-            if(earthlyBranches[i].hour1 === hh || earthlyBranches[i].hour2 === hh) {
-                
-                console.log(earthlyBranches[i].number);
-            }
+        var  first= document.getElementById("first").value;
+        var  second= document.getElementById("second").value;
+        //var  output= document.getElementById("second");
+
+        console.log(first+second);
+
+        for (var i = 0; i < first.length; i++) {
+            
+            var charF = first.charAt(i);
+            console.log(charF[i].length);
+
         }
 
-    }
+        for (var i = 0; i < second.length; i++) {
+            console.log(second.charAt(i));
+        }
+
+        
+    
+    
+    };
+
+
+
 
     </script>
 </hmtl>
