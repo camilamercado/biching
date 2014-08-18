@@ -228,15 +228,28 @@ function catcher () {
         console.log(first+second);
 
         for (var i = 0; i < first.length; i++) {
-            
-            var charF = first.charAt(i);
-            console.log(charF[i].length);
+
+           
+           var str= "gbscf0gi";
+           var breakN = first.charAt(i);
+           console.log(breakN);
+
+           var numbers = str.match(/\d+/g).map(Number);
+           console.log(numbers);
+
+           // var numval = breakN.charCodeAt(0) - 97;
+           // console.log(numval);
+
+           // var conv = parseInt(first, 10);
+           // console.log(conv);
 
         }
 
-        for (var i = 0; i < second.length; i++) {
-            console.log(second.charAt(i));
-        }
+        
+
+        // for (var i = 0; i < second.length; i++) {
+        //     console.log(second.charAt(i));
+        // }
 
         
     
