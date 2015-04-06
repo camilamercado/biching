@@ -17,7 +17,7 @@
 
 			.black {
 				width: 50%;
-				height: 1400px;
+				height: 1800px;
 				background: black;
 				float: left;
 				
@@ -194,6 +194,55 @@
 				position: absolute;
 			}
 
+			.pilot{
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				top: 900px;
+				/*border: 1px solid white;*/
+				margin-left: 40px;
+
+			}
+
+			.orb {
+				position: absolute;
+				background-size: 600px 600px;
+				background-image: url(img/hexs.png);
+				width: 600px;
+				height: 600px;
+				border-radius: 50%;
+				/*border: 1px dashed red;*/
+				margin-top: 50px;
+				margin-left: 50px;
+				 -webkit-transition: all 1s ease;
+			}
+
+			/*.orb:hover {
+				-ms-transform: rotate(180deg); 
+			    -webkit-transform: rotate(180deg); 
+			    transform: rotate(180deg);
+			    -webkit-transition: 2s ease;
+			}
+
+			.orb_Inner:hover {
+				-ms-transform: rotate(180deg); 
+			    -webkit-transform: rotate(180deg); 
+			    transform: rotate(180deg);
+			    -webkit-transition: 2s ease;
+			}*/
+
+			.orb_Inner {
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				background-size: 400px 400px;
+				background-image: url(img/hexs.png);
+				border-radius: 50%;
+				/*border: 1px dashed blue;*/
+				margin-top: 150px;
+				margin-left: 150px;
+				 -webkit-transition: all 1s ease;
+			}
 
 
 		</style>
@@ -212,6 +261,11 @@
 				
 				<div class="return">
 					<a href="http://camilamercado.github.io/biching/index.html">R<BR>T<BR>N<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>R<BR>T<BR>N</a>
+				</div>
+
+				<div class="pilot">
+					<div class="orb"></div>
+					<div class="orb_Inner"></div>
 				</div>
 			
 			</div>
@@ -243,190 +297,145 @@
 			</div>	
 
 				
-				<script>
+<script>
 
+	var iframe = document.querySelector(".myiframe"); 
 
+   	var url = "paper/binary.html";
+    iframe.src = url;
 
-					var iframe = document.querySelector(".myiframe"); 
-
-	               	var url = "paper/binary.html";
-	                iframe.src = url;
-
-					function binary() {
-						document.querySelector('.myiframe').style.display="block";
-						document.querySelector('.coin').style.display="none";
-						document.querySelector('.black').style.height="5000px";
-						document.querySelector('.link2').style.display="block";
-						document.querySelector('.link').style.display="none";
-						document.querySelector('.return').style.display="none";
-						
-					}
-
-					function image() {
-						document.querySelector('.myiframe').style.display="none";
-						document.querySelector('.coin').style.display="block";
-						document.querySelector('.black').style.height="1400px";
-						document.querySelector('.link').style.display="block";
-						document.querySelector('.link2').style.display="none";
-						document.querySelector(".return").style.display="block";
-						
-					}
-
-
-
-
-
-					var today = new Date();
-					var dd = today.getDate();
-					var mm = today.getMonth()+1; //January is 0!
-
-					var yyyy = today.getFullYear();
-					if(dd<10){dd='0'+dd} 
-					if(mm<10){mm='0'+mm} 
-					today = mm+'/'+dd+'/'+yyyy;
-
-					document.getElementById("I1").value=today;
-					console.log(today);
-					
-					var timer=setInterval(function(){convert()},1000);
-
-					//establish date and feed to input / set up timer interval
-
-						
-						function convert() {
-
-
-							var  input= document.getElementById("I1").value;
-						    var  output= document.getElementById("I2");  
-						    var  binary= output.value
-
-						    //asign text input and binary output via html
-
-								
-
-								output.value = "";
-								for (i=0; i < input.length; i++) {
-								        
-								    output.value +=input[i].charCodeAt(0).toString(2);
-								
-								}
-    
-								//for loop converts characters to unicode, then base 2 (binary)
-								    
-								    
-								    
-								    console.log(binary.length);
-								    var divide= binary.length /6;
-								    console.log(divide);
-	  
-										var lines= binary.match( new RegExp('.{1,' + Math.ceil(divide) + '}', 'g'));
-										console.log(lines);
-
-										//console logs binary sections in equal groups of 6 via . match / regular expression
-
-										    
-										    
-										    var coin= lines.reverse().map(Number);
-										    console.log(coin);
+	function binary() {
 		
-											//convert string to numeric value 
-											
-											var yin = " - -  ";
-											var yang = " ---  ";
-												
-												
-												for (var i = 0; i < coin.length; i++) {
+		document.querySelector('.myiframe').style.display="block";
+		document.querySelector('.coin').style.display="none";
+		document.querySelector('.black').style.height="5000px";
+		document.querySelector('.link2').style.display="block";
+		document.querySelector('.link').style.display="none";
+		document.querySelector('.return').style.display="none";
+		
+	}
 
-													if (coin[i] % 2 === 0) {
-												       
-												        coin[i] = "url(img/numbers/yin.png)"
-												        
-												    } else {
-												    	
-												    	coin[i] = "url(img/numbers/yang.png)"
-												       
-												    }
-
-												}
-
-												
-
-												// for each array substring find out if numerical value is evenly devisable by 2. 
-												// If so, replace string using regex from binary to a yin, broken line
-												// If not, replace string using regex from binary to a yang, solid line
-
-												
-
-													// $('#L5').append(
-										   //          	coin[5]
-										   //          );
-
-										   //          $('#L4').append(
-										   //          	coin[4]
-										   //          );
-
-										   //          $('#L3').append(
-										   //          	coin[3]
-										   //          );
-
-										   //          $('#L2').append(
-										   //          	coin[2]
-										   //          );
-
-										   //          $('#L1').append(
-										   //          	coin[1]
-										   //          );
-
-										   //          $('#L0').append(
-										   //          	coin[0]
-										   //          );
+	function image() {
+		
+		document.querySelector('.myiframe').style.display="none";
+		document.querySelector('.coin').style.display="block";
+		document.querySelector('.black').style.height="1400px";
+		document.querySelector('.link').style.display="block";
+		document.querySelector('.link2').style.display="none";
+		document.querySelector(".return").style.display="block";
+		
+	}
 
 
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
 
-												
-										   //         document.querySelector('.upper').style.backgroundImage=triUpper;
-												document.getElementById("L5").style.backgroundImage=coin[5];
-												document.getElementById("L4").style.backgroundImage=coin[4];
-												document.getElementById("L3").style.backgroundImage=coin[3];
+	var yyyy = today.getFullYear();
+	if(dd<10){dd='0'+dd} 
+	if(mm<10){mm='0'+mm} 
+	today = mm+'/'+dd+'/'+yyyy;
 
-												document.getElementById("L2").style.backgroundImage=coin[2];
-												document.getElementById("L1").style.backgroundImage=coin[1];
-												document.getElementById("L0").style.backgroundImage=coin[0];
+	document.getElementById("I1").value=today;
+	console.log(today);
+	
+	var timer=setInterval(function(){convert()},1000);
 
+	//establish date and feed to input / set up timer interval
 
-
-
-
-
-												//document.querySelector('#L5').style.backgroundImage=coin[5];
-												// document.getElementById("L4").value=coin[4];
-												// document.getElementById("L3").value=coin[3];
-
-												// document.getElementById("L2").value=coin[2];
-												// document.getElementById("L1").value=coin[1];
-												// document.getElementById("L0").value=coin[0];
-												
-
-												// var l5 = document.getElementById("L5").value
-												// var l4 = document.getElementById("L4").value
-												// var l3 = document.getElementById("L3").value
-												
-												// var l2 = document.getElementById("L2").value
-												// var l1 = document.getElementById("L1").value
-												// var l0 = document.getElementById("L0").value
-												
-
-												// pass coin array values to the HTML and build hexagram
-
-												// console.log(l5);
-
-												
-							}				
-									
-						
+		
+		function convert() {
 
 
-				</script>
+			var  input= document.getElementById("I1").value;
+		    var  output= document.getElementById("I2");  
+		    var  binary= output.value
+
+		    //asign text input and binary output via html
+
+			output.value = "";
+			for (i=0; i < input.length; i++) {
+			        
+			    output.value +=input[i].charCodeAt(0).toString(2);
+			
+			}
+
+			//for loop converts characters to unicode, then base 2 (binary)
+				    
+				    
+				    
+		    console.log(binary.length);
+		    var divide= binary.length /6;
+		    console.log(divide);
+
+			var lines= binary.match( new RegExp('.{1,' + Math.ceil(divide) + '}', 'g'));
+			console.log(lines);
+
+			//console logs binary sections in equal groups of 6 via . match / regular expression
+		    
+		    
+		    var coin= lines.reverse().map(Number);
+		    console.log(coin);
+
+			//convert string to numeric value 
+			
+			var yin = " - -  ";
+			var yang = " ---  ";
+				
+				
+				for (var i = 0; i < coin.length; i++) {
+
+					if (coin[i] % 2 === 0) {
+				       
+				        coin[i] = "url(img/numbers/yin.png)"
+				        
+				    } else {
+				    	
+				    	coin[i] = "url(img/numbers/yang.png)"
+				       
+				    }
+
+				}
+
+				
+				document.getElementById("L5").style.backgroundImage=coin[5];
+				document.getElementById("L4").style.backgroundImage=coin[4];
+				document.getElementById("L3").style.backgroundImage=coin[3];
+
+				document.getElementById("L2").style.backgroundImage=coin[2];
+				document.getElementById("L1").style.backgroundImage=coin[1];
+				document.getElementById("L0").style.backgroundImage=coin[0];
+								
+			};
+
+			var spinner=setInterval(function(){spin()},500);
+
+			function spin() {
+
+			var rotated = false;
+
+					//document.getElementById('decimal').onclick = function() {
+					    var div = document.querySelector('.orb');
+					    var div2 = document.querySelector('.orb_Inner');
+					       // deg = rotated ? 0 : 66;
+					        //deg = coin[1];
+					        deg = document.getElementById("I1").value;
+
+					    div.style.webkitTransform  = 'rotate('+deg+'deg)'; 
+					    div2.style.webkitTransform = 'rotate('+(-deg)+'deg)'; 
+					    div.style.mozTransform     = 'rotate('+deg+'deg)'; 
+					    div.style.msTransform      = 'rotate('+deg+'deg)'; 
+					    div.style.oTransform       = 'rotate('+deg+'deg)'; 
+					    div.style.transform        = 'rotate('+deg+'deg)'; 
+
+					    // div.style.webkitTransition      = 'rotate 2s ease;';
+					    rotated = !rotated;
+			};
+					
+		
+
+
+</script>
 		</body>
 </html>
 
