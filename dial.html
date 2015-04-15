@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+   background: ghostwhite;
+}
+
+.target {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: grey;
+}
+
+.compass {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: royalblue;
+  top: 300px;
+}
+
+/*.text {
+  position: relative;
+}
+*/
+  .circles {
+   /*margin-left: 50%;
+   left: -180px;*/
+   width: 300px;
+   height: 300px;
+  /* padding: 100px;*/
+   position: absolute;
+      /*border: 1px solid chartreuse;*/
+  }
+
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/*label {
+  display: none;
+}*/
+
+</style>
+<form>
+  <label><input type="radio" name="dataset" value="apples" checked="" > Apples</label>
+  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
+</form>
+
+<div class= "target"></div>
+<div class= "compass"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var fC = ["black","white"];
+var fC2 = ["white"];
+
+dial( 140, [32,0], fC,  "data/d5.tsv", ".target"  );
+dial( 120, [16,0], fC,  "data/d4.tsv", ".target"  );
+dial( 100, [8, 0], fC,  "data/d3.tsv", ".target"  );
+dial( 80,  [3, 0], fC,  "data/d2.tsv", ".target"  );
+dial( 60,  [1, 1], fC,  "data/d1.tsv", ".target"  );
+dial( 40,  [0, 0], fC,  "data/d0.tsv", ".target"  );
+ 
+dial( 80,  [3, 0], fC,  "data/d2.tsv", ".compass"  );
+dial( 70,  [1, 1], fC,  "data/d1.tsv", ".compass"  );
+dial( 60,  [0, 0], fC,  "data/d0.tsv", ".compass"  );
+dial( 50,  [8, 0], fC2, "data/d0.tsv", ".compass"  );
+
+function dial (oR, dR, fillColor, dataChart, dC) {
+
+
+var width  = 150,
+    height = 150,
+    radius = Math.min(width, height) / 2;
+
+var color = d3.scale.ordinal().domain(dR).range(fillColor);
+
+var pie = d3.layout.pie()
+    .value(function(d) { return d.apples; })
+    .sort(null);
+    
+
+var arc = d3.svg.arc()
+    .innerRadius(0)
+    .outerRadius(oR);
+
+var svg = d3.select(dC).append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("class", "circles")
+    .append("g") 
+    .attr("transform", "translate(" + width  + "," + height + ")");
+
+ 
+d3.tsv(dataChart, type, function(error, data) {
+  var path = svg.datum(data).selectAll("path")
+      .data(pie)
+    .enter().append("g:path")
+    .attr("d", arc)
+     .attr("fill", function(d, i) { return color(i); })
+    .each(function(d) { this._current = d; });
+
+    path.append("svg:text")   
+
+                .attr("transform", function(d) {                 
+                d.innerRadius = 0;
+                d.outerRadius = oR;
+                return "translate(" + arc.centroid(d) + ")";        
+            })
+            .attr("text-anchor", "middle")                         
+            .text(function(d, i) { return d.data.labels; }); 
+
+  d3.selectAll("input")
+      .on("change", change);
+
+  var timeout = setTimeout(function() {
+    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
+  }, 2000);
+
+  function change() {
+    var value = this.value;
+    clearTimeout(timeout);
+    pie.value(function(d) { return d[value]; }); // change the value function
+    path = path.data(pie); // compute the new angles
+    console.log(path);
+    path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+  }
+});
+
+function type(d) {
+  d.apples = +d.apples;
+  d.oranges = +d.oranges;
+  return d;
+}
+
+// Store the displayed angles in _current.
+// Then, interpolate from _current to the new angles.
+// During the transition, _current is updated in-place by d3.interpolate.
+function arcTween(a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+    return arc(i(t));
+  };
+}
+};
+
+
+</script>
